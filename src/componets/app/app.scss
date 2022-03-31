@@ -1,0 +1,49 @@
+@import '../../settings.scss';
+
+.intro {
+  position: relative;
+  max-width: 1280px;
+  min-height: 656px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 192px;
+  background-image: url(../../img/img-bg-intro.jpg);
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(31, 31, 31, 0.6);
+  }
+
+  &__slider {
+    margin-top: 21px;
+    padding: 0 50px 19px;
+  }
+
+  &__wrapper-search {
+    margin-top: 17px;
+    padding: 0 6.5%;
+  }
+
+  @include respond($tabletLandscape) {
+    &__wrapper-search {
+      padding: 0;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 880px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}

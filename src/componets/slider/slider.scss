@@ -1,0 +1,73 @@
+@import '../../settings.scss';
+
+.slider-country {
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      #ffffff 51.04%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+  }
+
+  .swiper-slide {
+    max-width: max-content;
+    @include fontFamily(17px, 'Montserrat Medium');
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: all 0.3s ease-out;
+  }
+
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .swiper-slide-active {
+    @include fontFamily(17px, 'Montserrat SemiBold');
+    color: $colorWhite;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 30%;
+    width: 24px;
+    height: 16px;
+    margin-top: auto;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-out;
+
+    &:after {
+      content: none;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .swiper-button-next {
+    right: 0px;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  @include respond($phoneSm) {
+    .swiper-slide {
+      color: $colorWhite;
+    }
+  }
+}

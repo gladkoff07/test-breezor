@@ -1,0 +1,27 @@
+/* Var */
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorBlueDegrees: #0468ff;
+$colorBlueDeep: #001e4a;
+$colorSmokyWhite_f0: #f0f0f0;
+$colorSmokyWhite_f5: #f5f5f5;
+$colorGrayBrown: #434343;
+$colorYellowOrange: #eb6012;
+$colorTelegray: #8c8c8c;
+
+// Breakpoints
+$phoneXs: '(max-width: 375px)';
+$phoneSm: '(max-width: 575px)';
+$tabletPortrait: '(max-width: 767px)';
+$tabletLandscape: '(max-width: 1023px)';
+
+@mixin fontFamily($size, $family) {
+  font-family: $family;
+  font-size: $size;
+}
+
+@mixin respond($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
